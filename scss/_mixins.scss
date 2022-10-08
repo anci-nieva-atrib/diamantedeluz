@@ -1,0 +1,77 @@
+//mixin texto
+
+@mixin texto ($fontsize, $interlineado, $peso){
+    font-size: $fontsize;
+    line-height: $interlineado;
+    font-weight: $peso;
+}
+
+//mixin flex
+@mixin flex__J ($flex, $justify){
+    display: $flex;
+    justify-content: $justify;
+}
+
+@mixin flex__JA ($flex, $justify, $align){
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin flex__D ($flex, $direction){
+    display: $flex;
+    flex-direction: $direction;
+}
+
+@mixin flex__JD ($flex, $justify, $direction){
+    display: $flex;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+@mixin flex__JDA ($flex, $justify, $direction, $align){
+    display: $flex;
+    justify-content: $justify;
+    flex-direction: $direction;
+    align-items: $align;
+}
+
+@mixin flex__JDA--media ($justify, $direction, $align){
+    justify-content: $justify;
+    flex-direction: $direction;
+    align-items: $align;
+}
+
+
+//breakpoints
+@mixin media($breakpoint){
+    @if $breakpoint == 532{
+        @media (min-width: 532px){
+            @content;
+        }
+    }
+
+    @if $breakpoint == 690{
+        @media (min-width: 690px){
+            @content;
+        }
+    }
+
+    @if $breakpoint == 790{
+        @media (min-width: 790px){
+            @content;
+        }
+    }
+
+    @if $breakpoint == 992{
+        @media (min-width: 992px){
+            @content;
+        }
+    }
+
+    @if $breakpoint == 1200{
+        @media (min-width: 1200px){
+            @content;
+        }
+    }
+}

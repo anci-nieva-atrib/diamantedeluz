@@ -1,0 +1,783 @@
+*{
+    margin: $margin__0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+h1,h2{
+    font-family: $tipografia;
+    @include texto ($texto__Xxl, $interlinea__4--5, $texto__semibold);
+    color: $main__color;
+    text-align: center;
+    text-decoration: none;
+    margin: 24px 0px
+}
+
+h3,h4{
+    font-family: $tipografia;
+    text-decoration: none;
+}
+
+.titulo__destacado{
+    color: $gray__color;
+    @include texto ($texto__M, $interlinea__2, $texto__bold);
+    text-align: left;
+    margin: 32px 0px 8px 0px;
+}
+
+p{
+    font-family: $tipografia;
+    color: $gray__color;
+    @include texto ($texto__M, $interlinea__3, $texto__regular);
+    margin-bottom: $margin__B--24;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
+
+//nav principal
+.navbar{
+    background-color: $main__color;
+    font-family: $tipografia;
+    padding: 16px 0px 8px 0px;
+    position: sticky;
+    top: 0%;
+}
+
+nav{
+    div{
+        img{
+            width: $w__logo;
+            margin-left: $margin__L--16;
+            margin-bottom: $margin__B--8;
+        }
+
+        button{
+            img{
+                width: 26px;
+            }
+        }
+
+        div{
+            ul{
+                display: flex;
+                li{
+                    a{
+                        color: $white__color;
+                        font-family: $tipografia;
+                        @include texto ($texto__M, $interlinea__3, $texto__regular);
+                        text-decoration: none;
+                        list-style: none;
+                        display: inline-block;
+                        margin: 8px 16px 8px 20px;
+                        &:hover{
+                            font-weight: $texto__bold;
+                            text-decoration: none;
+                            color: $white__color;
+                            border-bottom: 3px solid $main__color--light;
+                        }
+                    }
+
+                }
+
+                .navbar-nav{
+                    list-style: none;
+                    display: flex;
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+//header
+header{
+    div{
+        h2{
+            color: $white__color;
+            text-align: left;
+            @include texto ($texto__Xxl, $interlinea__4--5, $texto__bold);
+        }
+
+        .bg__header--boton{
+            background-color: $background__color--boton;
+            color: $white__color;
+            text-decoration: none;
+            @include texto ($texto__S, 0, $texto__semibold);
+            letter-spacing: 5px;
+            border-radius: 4px;
+            padding: 20px 16px;
+            text-align: center;
+            margin-top: $margin__T--24;
+            &:hover{
+                background-color: $main__color--light;
+                color: $white__color;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .header__img--fluid{
+        width: $w__100;
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
+
+
+//breadcrumb
+.migas{
+    font-family: $tipografia;
+    color: $gray__color;
+    text-decoration: none;
+    @include texto ($texto__S, $interlinea__2, $texto__regular);
+    display: flex;
+    margin: 48px 0px 0px 48px;
+}
+
+.migas__active{
+    font-weight: $texto__semibold;
+    margin-left: $margin__L--16;
+}
+
+
+
+//nav secundaria
+div{
+    .tabnav{
+        font-family: $tipografia;
+        text-decoration: none;
+        display: flex;
+    }
+    
+    .tabnav__ul{
+        margin-top: $margin__T--24;
+        list-style: none;
+        @include flex__JA (flex, center, center);
+        width: $w__100;
+        padding-left: 0;
+    }
+    
+    .tabnav__li--inactivo{
+        color: $main__color;
+        @include texto ($texto__M, 0, $texto__regular);
+        text-decoration: none;
+        margin: $margin__8;
+        padding: 8px 16px;
+        border-radius: 50px;
+        border: 2px solid $main__color;
+        &:hover{
+            font-weight: $texto__medium;
+            color: $main__color;
+            cursor: pointer;
+        }
+    }
+    
+    .tabnav__activo--text{
+        color: $white__color;
+        @include texto ($texto__M, 0, $texto__medium);
+        text-decoration: none;
+    }
+    
+    .tabnav__li--activo{
+        background-color: $main__color;
+        padding: 10px 16px;
+        margin: $margin__8;
+        border-radius: 50px;
+        &:hover{
+            color: $white__color;
+            font-weight: $texto__regular;
+            cursor: pointer;
+        }
+    }
+}
+
+
+//intro
+.intro{
+    margin: 20px auto;
+    width: $w__90;
+    height: auto;
+}
+
+.intro__titulo{
+    line-height: 4.7rem;
+    margin-bottom: $margin__B--24;
+}
+
+.lista__preguntas{
+    font-family: $tipografia;
+    color: $gray__color;
+    @include texto ($texto__M, $interlinea__3, $texto__regular);
+    list-style-type: circle;
+}
+
+
+//botones reservar-enviar
+.bg__turno--boton{
+    background-color: $background__color--boton;
+    color: $white__color;
+    @include texto ($texto__S, 0, $texto__semibold);
+    text-decoration: none;
+    letter-spacing: 5px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 20px 16px;
+    margin: 8px 0px 32px 0px;
+}
+
+
+//imagenes body
+.img__fluid{
+    width: $w__100;
+    margin-bottom: $margin__B--24;
+    height: auto;
+    object-fit: cover;
+}
+
+//iframe
+.iframe{
+    width: $w__100;
+    margin: 40px 0px 32px 0px;
+}
+
+
+//footer
+footer{
+    background-color: $main__color--dark;
+    font-family: $tipografia;
+    color: $white__color;
+    @include flex__J (flex,space-between);
+    top: 0%;
+    padding: 24px 24px;
+
+    div{
+        ul{
+            list-style: none;
+
+            li{
+                font-family: $tipografia;
+                color: $white__color;
+                @include texto ($texto__M, $interlinea__2--5, $texto__light);
+                text-decoration: none;
+                margin: 0px 16px;
+
+                a{  color: $white__color;
+                    font-family: $tipografia;
+                    @include texto ($texto__M, $interlinea__3, $texto__light);
+                    text-decoration: none;
+                    &:hover{
+                        font-weight: $texto__medium;
+                        text-decoration: none;
+                        color: white;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer{
+    padding: 32px 0px;
+    @include flex__D (flex,column);
+}
+
+.footer__columnas--logo{
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    @include flex__JD (flex, left, column);
+    margin: 0px 16px 24px 16px;
+}
+
+.footer__logo{
+    width: $w__logo;
+    padding: 8px 0px;
+}
+
+.footer__columnas{
+    @include flex__D (flex,column);
+}
+
+.footer__contacto{
+    @include flex__D (flex, row);
+    justify-items: center;
+    margin-bottom: $margin__B--16;
+}
+
+.footer__iconos--redes{
+    width: $w__100;
+    margin-top: $margin__T--16;
+}
+
+.footer__legales{
+    margin: 24px 16px;
+    @include flex__J (flex,center);
+    color: $main__color--dark;
+}
+
+.footer__section{
+    padding: 16px 0px;
+    color: $white__color;
+}
+
+.footer__listas{
+    @include flex__D (flex,column);
+    padding: 16px 0px;
+    margin-left: $margin__L--16;
+}
+
+
+
+//servicios
+section{
+    figcaption{
+        text-decoration: none;
+        color: $gray__color;
+        .servicio__figure--figcaption{
+            &:hover{
+            color: $main__color;
+            cursor: pointer;
+            }
+        }
+    }
+}
+
+.servicios{
+	margin: $margin__24;
+}
+
+.servicios__figure{  
+    text-align: center;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.06);
+    background-color: $white__color;
+    width: $w__100;
+    border-radius: 12px 12px;
+}
+
+.servicios__figure--img{
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    width: $w__100;
+    margin: $margin__0;
+}
+
+.servicio__figure--figcaption{
+    padding: 36px 0px;
+    text-align: center;
+    @include texto ($texto__Xl, 0, $texto__regular);
+}
+
+
+
+//testimonios
+.testimonios{
+    background-color: $background__color--gray;
+    padding: 40px 0px 16px 0px;
+    margin: $margin__0;
+    width: $w__100;
+}
+
+.testimonios__section{
+    padding: 24px;
+    background-color: $background__color--gray;
+    width: $w__100;
+    margin-bottom: $margin__B--32;
+}
+
+.testimonios__article{
+    top: 0%;
+    @include flex__JDA (flex,left,column,flex-start);
+    padding: 24px;
+    background-color: $white__color;
+    border-radius: 12px 12px;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.06);
+}
+
+.testimonios__article--p{
+    font-size: $texto__M;
+    margin-top: $margin__T--16;
+    line-height: $interlinea__3;
+}
+
+.testimonios__article--h3{
+    font-family: $tipografia;
+    @include texto ($texto__M, $interlinea__3, $texto__semibold);
+    margin-top: $margin__T--16;
+    color: $main__color--dark;
+}
+
+.testimonios__separador{
+    border: 0.5px solid rgba(203, 203, 203, 0.5);
+    width: $w__100;
+}
+
+
+
+//agenda
+section{
+    figcaption{
+        a{
+            &:hover{
+            color: $main__color;
+            cursor: pointer;
+            }
+        }
+    }
+}
+
+
+.agenda{
+	margin: $margin__24;
+}
+
+.agenda__figure{
+    @include flex__D (flex, row);
+    top: 0%;
+    width: $w__100;
+    height: 100%;
+    background-color: $white__color;
+    border-radius: 12px 12px;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.06);
+}
+
+.agenda__h3{
+    padding: 24px 16px;
+    background-color: $main__color--light;
+    border-radius: 12px 12px;
+    color: $white__color;
+    @include texto ($texto__Xl, $interlinea__3, $texto__bold);
+    text-align: center;
+    @include flex__JA (flex, center, center);
+    width: $w__25;
+    margin-bottom: $margin__B--0;
+}
+
+.agenda__figure--figcaption{
+    padding: 16px 24px;
+    text-align: left;
+}
+
+.agenda__figcaption--h4{
+    text-align: left;
+    @include texto ($texto__L, $interlinea__2--5, $texto__medium);
+    color: $gray__color;
+    padding-bottom: 8px;
+}
+
+.agenda__figcaption--a{
+    @include texto ($texto__M, 0, $texto__bold);
+    color: $main__color--light;
+}
+
+
+//contacto
+article ul{
+    font-family: $tipografia;
+    color: $gray__color;
+    @include texto ($texto__M, $interlinea__4--5, $texto__regular);
+    margin-bottom: $margin__B--24;
+    list-style: none;
+}
+
+article{
+    form{
+        div{
+            label{
+                font-family: $tipografia;
+                color: $gray__color;
+                margin-top: $margin__B--24;
+            }
+
+            input{
+                width: $w__100;
+                height: 48px;
+                font-size: $texto__M;
+                color: $gray__color;
+            }
+        }
+    }
+}
+
+.contacto{
+    width: $w__100;
+}
+
+.contacto__formulario{
+    margin: 0px 24px;
+}
+
+.contaco__label{
+    font-size: $texto__M;
+}
+
+.contacto__formulario--value{
+    @include flex__JD (flex, space-between, row);
+}
+
+.contacto__section{
+    font-size: $texto__M;
+    line-height: $interlinea__2;
+}
+
+.iconos__alineacion{
+    @include texto ($texto__M, $interlinea__2--5, $texto__regular);
+    @include flex__JD (flex,left,row);
+    margin-bottom: $margin__B--12;
+}
+
+.row{
+    --bs-gutter-x: 0;
+}
+
+
+
+
+.separador{
+    border: 0.5px solid rgba(203, 203, 203, 0.3);
+    width: auto;
+    margin: 48px 24px 0px 24px;
+}
+
+
+
+.select{
+    font-weight: $texto__bold;
+    text-decoration: none;
+    border-bottom: 3px solid $main__color--light;  
+}
+
+
+
+
+// media querys
+body{
+    @include media(532){
+        .header__img--fluid{
+            width: $w__100;
+            height: 300px;
+            object-fit: cover;
+        }
+    
+        header div h2{
+            color: $white__color;
+            text-align: left;
+            @include texto (4.5rem, 5.5rem, $texto__bold);
+            width: 80%;
+        }
+    
+        .bg__header--boton{
+            font-size: $texto__M;
+            margin-top: 28px;
+        }
+    }
+
+    @include media (690){
+        p{
+            width: 88%;
+            margin: 16px 32px;
+        }
+    
+        .servicios{
+            margin: 0px 64px;
+        }
+    
+        .testimonios__article{
+            margin: 0px 16px;
+        }
+    
+        .agenda{
+            margin: 0px 64px;
+        }
+    
+        .titulo__destacado{
+            margin: 16px 32px;
+        }
+    
+        #headerboton{
+            margin: 0px 32px;
+        }
+    
+        .footer__columnas--logo{
+            margin: 0px 64px;
+        }
+    
+        .footer__columnas{
+            margin: 0px 60px;
+        }
+    
+        .contacto__formulario {
+            margin: 0px 64px;
+        }
+    
+        .row{
+            --bs-gutter-x: 0;
+        }
+    
+        .iconos__alineacion{
+            margin: 0px 48px 12px 48px;
+        }
+    
+        .contacto__iconos--redes{
+            margin: 24px 48px 48px 48px;
+        }
+    }
+
+    @include media (790){
+        .header__img--fluid{
+            height: 400px;
+        }
+    
+        header div h2{
+            font-size: 5.5rem;
+            line-height: 6.5rem;
+            width: 70%;
+            margin-top: 40px;
+        }
+    
+        .bg__header--boton{
+            font-size: 2rem;
+            margin-top: 40px;
+        }
+    
+        .iframe{
+            margin: 16px 0px 32px 0px;
+        }
+
+        .agenda{
+            margin: 0px 24px 0px 36px;
+        }
+
+        .agenda__figure{
+            width: 93%;
+        }
+    
+        .servicios{
+            margin: 0px 24px 0px 36px;
+        }
+
+        .servicios__figure{
+            width: 93%;
+        }
+    
+    }
+
+    @include media (992){
+        .header__img--fluid{
+            height: 508px;
+        }
+    
+        header div h2{
+            font-size: 6.5rem;
+            line-height: 8rem;
+            width: 70%;
+            margin-top: 60px;
+        }
+    
+        .bg__header--boton{
+            font-size: $texto__Xl;
+            margin-top: 56px;
+        }
+    
+        .footer__columnas{
+            flex-direction: row;
+            margin-right: $margin__R--16;
+        }
+    
+        .footer{
+            @include flex__JDA--media (space-between,row,flex-start);
+            text-align: left;
+        }
+    
+        .footer__listas{
+            padding: 16px 0px;
+            flex-direction: column;
+        }
+    
+        .footer__contacto{
+            margin-bottom: $margin__B--16;
+        }
+
+        .agenda{
+            margin: 0px 32px 0px 48px;
+        }
+
+        .agenda__figure{
+            width: 94%;
+        }
+    
+        .servicios{
+            margin: 0px 24px 0px 40px;
+        }
+
+        .servicios__figure{
+            width: 94%;
+        }
+    }
+
+    @include media (1200){
+        .header__img--fluid{
+            height: 508px;
+        }
+        header div h2{
+            font-size: 6.5rem;
+            line-height: 7rem;
+            width: 45%;
+            margin-top: 60px;
+        }
+    
+        .bg__header--boton{
+            font-size: $texto__Xl;
+            margin-top: 56px;
+        }
+    
+        .agenda{
+            margin: 0px 64px;
+        }
+
+        .agenda__figure{
+            width: 92%;
+        }
+    
+        .servicios{
+            margin: 0px 48px 0px 64px;
+        }
+
+        .servicios__figure{
+            width: 92%;
+        }
+    
+        .footer__columnas--logo{
+            margin: 0px 40px;
+        }
+    
+        .footer__columnas{
+            margin: 0px 40px;
+        }
+    
+        nav div img{
+            margin-left: 28px;
+        }
+        
+        nav div div{
+            margin-right: 20px;
+        }
+    
+        .testimonios__section{
+            padding: 0px 64px;
+        }
+    }
+}
