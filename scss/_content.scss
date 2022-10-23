@@ -23,8 +23,15 @@ h3,h4{
 }
 
 .titulo__destacado{
-    color: $gray__color;
+    color: $main__color;
     @include texto ($texto__M, $interlinea__2, $texto__bold);
+    text-align: left;
+    margin: 40px 0px 8px 0px;
+}
+
+.titulo__destacado--Xl{
+    color: $main__color;
+    @include texto ($texto__Xl, $interlinea__3, $texto__bold);
     text-align: left;
     margin: 32px 0px 8px 0px;
 }
@@ -39,6 +46,11 @@ p{
 
 a{
     text-decoration: none;
+}
+
+strong{
+    color: $main__color--dark;
+    font-weight: $texto__semibold;
 }
 
 
@@ -222,6 +234,7 @@ div{
     color: $gray__color;
     @include texto ($texto__M, $interlinea__3, $texto__regular);
     list-style-type: circle;
+    margin-left: 24px;
 }
 
 
@@ -236,6 +249,45 @@ div{
     text-align: center;
     padding: 20px 16px;
     margin: 8px 0px 32px 0px;
+    &:hover{
+        background-color: $main__color--light;
+        color: $white__color;
+        cursor: pointer;
+    }
+}
+
+.bg__icono--boton{
+    background-color: $background__color--boton;
+    color: $white__color;
+    @include texto ($texto__S, 0, $texto__semibold);
+    text-decoration: none;
+    letter-spacing: 5px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 9px 16px;
+    margin: 0px 0px 16px 0px;
+    &:hover{
+        background-color: $main__color--light;
+        color: $white__color;
+        cursor: pointer;
+    }
+}
+
+.bg__inicio--boton{
+    background-color: $background__color--boton;
+    color: $white__color;
+    @include texto ($texto__S, 0, $texto__semibold);
+    text-decoration: none;
+    letter-spacing: 5px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 20px 17px 20px 24px;
+    margin: 0px 0px 16px 0px;
+    &:hover{
+        background-color: $main__color--light;
+        color: $white__color;
+        cursor: pointer;
+    }
 }
 
 
@@ -246,6 +298,12 @@ div{
     height: auto;
     object-fit: cover;
 }
+
+.img__fluid--diamante{
+    width: $w__100;
+    height: auto;
+}
+
 
 //iframe
 .iframe{
@@ -281,7 +339,7 @@ footer{
                     &:hover{
                         font-weight: $texto__medium;
                         text-decoration: none;
-                        color: white;
+                        color: $white__color;
                         cursor: pointer;
                     }
                 }
@@ -491,6 +549,7 @@ article ul{
     @include texto ($texto__M, $interlinea__4--5, $texto__regular);
     margin-bottom: $margin__B--24;
     list-style: none;
+    padding: 0px;
 }
 
 article{
@@ -499,7 +558,7 @@ article{
             label{
                 font-family: $tipografia;
                 color: $gray__color;
-                margin-top: $margin__B--24;
+                margin-top: $margin__T--16;
             }
 
             input{
@@ -520,12 +579,14 @@ article{
     margin: 0px 24px;
 }
 
-.contaco__label{
+.contacto__label{
     font-size: $texto__M;
+    line-height: $interlinea__4--5
 }
 
-.contacto__formulario--value{
-    @include flex__JD (flex, space-between, row);
+.contacto__formulario--input{
+    font-size: $texto__S;
+    color: $gray__color;
 }
 
 .contacto__section{
@@ -533,10 +594,19 @@ article{
     line-height: $interlinea__2;
 }
 
+.contacto__iconos--redes{
+    margin: 0px 0px 0px 24px;
+}
+
 .iconos__alineacion{
     @include texto ($texto__M, $interlinea__2--5, $texto__regular);
     @include flex__JD (flex,left,row);
-    margin-bottom: $margin__B--12;
+    margin: 0px 0px 12px 24px;
+}
+
+.iconos{
+    width: 22px;
+    margin: 0px 8px 0px 0px;
 }
 
 .row{
@@ -545,13 +615,11 @@ article{
 
 
 
-
 .separador{
     border: 0.5px solid rgba(203, 203, 203, 0.3);
     width: auto;
-    margin: 48px 24px 0px 24px;
+    margin: 48px 24px 60px 24px;
 }
-
 
 
 .select{
@@ -561,6 +629,16 @@ article{
 }
 
 
+.box__error{
+    width: $w__100;
+    padding: 0px 24px 36px 24px;
+}
+
+
+.composicion__error{
+    @include flex__JD (flex,center,column);
+    width: $w__100;
+}
 
 
 // media querys
@@ -583,6 +661,11 @@ body{
             font-size: $texto__M;
             margin-top: 28px;
         }
+
+        .bg__inicio--boton{
+            margin: 0px 16px 16px 0px;
+        }
+        
     }
 
     @include media (690){
@@ -618,6 +701,10 @@ body{
         .footer__columnas{
             margin: 0px 60px;
         }
+
+        .footer__listas{
+            margin-left: $margin__0;
+        }
     
         .contacto__formulario {
             margin: 0px 64px;
@@ -628,11 +715,33 @@ body{
         }
     
         .iconos__alineacion{
-            margin: 0px 48px 12px 48px;
+            margin: 0px 48px 12px 64px;
         }
     
         .contacto__iconos--redes{
-            margin: 24px 48px 48px 48px;
+            margin: 24px 48px 48px 64px;
+        }
+
+        .img__fluid--diamante{
+            width: 70%;
+            height: auto;
+            margin-left: 15%;
+        }
+
+        .box__error{
+            padding: 0px 80px 48px 80px;
+        }
+
+        .parrafo__error{
+            margin: 0px 0px 24px 0px;
+        }
+
+        .intro__titulo{
+            width: $w__90;
+        }
+        
+        .lista__preguntas{
+            margin-left: 48px;
         }
     }
 
@@ -672,7 +781,39 @@ body{
         .servicios__figure{
             width: 93%;
         }
-    
+
+        .composicion__error{
+            @include flex__D (flex,row);
+        }
+
+        .img__fluid--diamante{
+            width: $w__100;
+            margin: 0px 24px;
+        }
+
+        .titulo__destacado--Xl{
+            margin: 8px 0px;
+        }
+
+        .box__error{
+            padding: 0px 0px 36px 36px;
+        }
+
+        .intro__titulo{
+            width: 60%;
+        }
+
+        .contacto__formulario{
+            margin: 0px 40px 0px 0px;
+        }
+
+        .iconos__alineacion{
+            margin: 0px 0px 12px 0px;
+        }
+
+        .contacto__iconos--redes{
+            margin: 24px 0px 48px 0px;
+        }
     }
 
     @include media (992){
@@ -705,6 +846,7 @@ body{
         .footer__listas{
             padding: 16px 0px;
             flex-direction: column;
+            margin-right: $margin__R--16;
         }
     
         .footer__contacto{
@@ -725,6 +867,24 @@ body{
 
         .servicios__figure{
             width: 94%;
+        }
+
+        .img__fluid--diamante{
+            width: $w__90;
+        }
+
+        .titulo__destacado--Xl{
+            margin-top: $margin__T--24;
+        }
+
+        .box__error{
+            width: 70%;
+            padding: 0px 0px 36px 36px;
+        }
+
+        .composicion__error{
+            @include flex__JA (flex,center,center);
+            padding: 0% 10%;
         }
     }
 
@@ -778,6 +938,11 @@ body{
     
         .testimonios__section{
             padding: 0px 64px;
+        }
+
+        .img__fluid--diamante{
+            width: $w__100;
+            margin-right: 48px;
         }
     }
 }
