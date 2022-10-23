@@ -4,7 +4,7 @@
 ###### [000webhost](https://diamantedeluz.000webhostapp.com/index.html)
 
 ## Introducción
-Diamante de Luz ¡Hola! Bienvenidx a mi proyecto de Desarrollo Web de CoderHouse!
+¡Hola! Bienvenidx a Diamante de Luz, mi proyecto de Desarrollo Web de CoderHouse!
 
 Soy Ana Belén Nieva Atrib pero me dicen Anci, y este es el sitio web institucional que armé para Diamante de Luz, un espacio sobre la información necesaria para entender de qué se trata el Reiki, los Registros Akáshicos, las Constelaciones Familiares y Ho'oponopono. Además, brinde un nexo con Mónica Atrib quien es terapeuta holística, y solicitale un turno.
 
